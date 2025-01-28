@@ -11,6 +11,91 @@
 // Pino que realizará a comunicação do microcontrolador com a matriz
 #define LED_MATRIX_PIN 7
 
+// Definindo a cor padrão dos leds
+#define WHITE_COLOR (RGB_color){1.0, 1.0, 1.0}
+#define OFF (RGB_color){0.0, 0.0, 0.0}
+
+// Definindo a estética dos números
+Led_matrix_layout zero_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
+Led_matrix_layout one_layout = {
+    {OFF,OFF,OFF,OFF,WHITE_COLOR},
+    {OFF,OFF,OFF,OFF,WHITE_COLOR},
+    {OFF,OFF,OFF,OFF,WHITE_COLOR},
+    {OFF,OFF,OFF,OFF,WHITE_COLOR},
+    {OFF,OFF,OFF,OFF,WHITE_COLOR},
+};
+
+Led_matrix_layout two_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,OFF        },
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
+Led_matrix_layout three_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
+Led_matrix_layout four_layout = {
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+};
+
+Led_matrix_layout five_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,OFF        },
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
+Led_matrix_layout six_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,OFF        },
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
+Led_matrix_layout seven_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+};
+
+Led_matrix_layout eight_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
+Led_matrix_layout nine_layout = {
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {WHITE_COLOR,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+    {OFF        ,OFF        ,OFF        ,OFF        ,WHITE_COLOR},
+    {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
+};
+
 // Gera o binário que controla a cor de cada célula de LED na matriz
 uint32_t generate_color_binary(double red, double green, double blue)
 {
