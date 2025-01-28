@@ -96,6 +96,51 @@ Led_matrix_layout nine_layout = {
     {WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR,WHITE_COLOR},
 };
 
+Led_matrix_layout* get_number_layout(int number){
+    switch (number)
+    {
+    case 1:
+        return &one_layout;
+    break;
+
+    case 2:
+        return &two_layout;
+    break;
+
+    case 3:
+        return &three_layout;
+    break;
+
+    case 4:
+        return &four_layout;
+    break;
+
+    case 5:
+        return &five_layout;
+    break;
+
+    case 6:
+        return &six_layout;
+    break;
+
+    case 7:
+        return &seven_layout;
+    break;
+
+    case 8:
+        return &eight_layout;
+    break;
+
+    case 9:
+        return &nine_layout;
+    break;
+    
+    default:
+    return &zero_layout;
+        break;
+    }
+}
+
 // Gera o binário que controla a cor de cada célula de LED na matriz
 uint32_t generate_color_binary(double red, double green, double blue)
 {
