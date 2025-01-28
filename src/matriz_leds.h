@@ -1,5 +1,6 @@
 #ifndef _MATRIZ_LEDS_H
 #define _MATRIZ_LEDS_H
+#include "hardware/pio.h"
 
 // Definição de tipo da estrutura que irá controlar a cor dos LED's
 typedef struct {
