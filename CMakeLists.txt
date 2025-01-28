@@ -41,7 +41,7 @@ pico_set_program_name(embarcatech-u4-c4-tarefa1 "embarcatech-u4-c4-tarefa1")
 pico_set_program_version(embarcatech-u4-c4-tarefa1 "0.1")
 
 # Generate PIO header
-pico_generate_pio_header(embarcatech-u4-c4-tarefa1 ${CMAKE_CURRENT_LIST_DIR}/blink.pio)
+pico_generate_pio_header(embarcatech-u4-c4-tarefa1 ${CMAKE_CURRENT_LIST_DIR}/pio_matrix.pio)
 
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(embarcatech-u4-c4-tarefa1 1)
