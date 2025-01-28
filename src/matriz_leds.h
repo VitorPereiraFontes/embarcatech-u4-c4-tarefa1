@@ -20,4 +20,6 @@ void draw_on_matrix(Led_matrix_layout layout, PIO pio, uint sm);
 
 RGB_color get_color_by_RGB_code(int red, int green, int blue);
 
+Led_matrix_layout* get_number_layout(int number);
+
 #endif
