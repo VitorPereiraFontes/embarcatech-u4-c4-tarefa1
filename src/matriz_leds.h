@@ -14,7 +14,7 @@ typedef RGB_color Led_matrix_layout[5][5];
 
 uint32_t generate_color_binary(double red, double green, double blue);
 
-uint initialize_matrix(PIO pio);
+uint initialize_matrix(PIO pio,uint led_matrix_pin);
 
 void draw_on_matrix(Led_matrix_layout layout, PIO pio, uint sm);
 

@@ -8,9 +8,6 @@
 // Arquivo .pio para controle da matriz
 #include "pio_matrix.pio.h"
 
-// Pino que realizará a comunicação do microcontrolador com a matriz
-#define LED_MATRIX_PIN 7
-
 // Definindo a cor padrão dos leds
 #define WHITE_COLOR (RGB_color){1.0, 1.0, 1.0}
 #define OFF (RGB_color){0.0, 0.0, 0.0}
@@ -152,7 +149,7 @@ uint32_t generate_color_binary(double red, double green, double blue)
 }
 
 // Inicializa a matriz de LED's
-uint initialize_matrix(PIO pio){
+uint initialize_matrix(PIO pio, uint led_matrix_pin){
     bool ok;
 
     // Define o clock para 128 MHz, facilitando a divisão pelo clock
@@ -167,7 +164,7 @@ uint initialize_matrix(PIO pio){
     //configurações da PIO
     uint offset = pio_add_program(pio, &pio_matrix_program);
     uint sm = pio_claim_unused_sm(pio, true);
-    pio_matrix_program_init(pio, sm, offset, LED_MATRIX_PIN);
+    pio_matrix_program_init(pio, sm, offset, led_matrix_pin);
 
     return sm;
 }
