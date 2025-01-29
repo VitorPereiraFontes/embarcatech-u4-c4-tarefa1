@@ -36,7 +36,7 @@ void buttons_irq_handler(uint gpio, uint32_t events){
             case 5:
                 printf("Botão A foi pressionado\n");
 
-                if(counter + 1 <= 9){
+                if(counter < 9){
                     draw_on_matrix(*(get_number_layout(++counter)),pio,sm);
                 }
             break;
@@ -44,7 +44,7 @@ void buttons_irq_handler(uint gpio, uint32_t events){
             case 6:
                 printf("Botão B foi pressionado\n");
 
-                if(counter - 1 >= 0){
+                if(counter > 0){
                     draw_on_matrix(*(get_number_layout(--counter)),pio,sm);
                 }
             break;
