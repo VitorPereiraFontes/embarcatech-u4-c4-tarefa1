@@ -18,7 +18,42 @@ uint sm;
 volatile uint counter = 0; // Armazena a informação do número atual do display
 
 // Variáveis para o controle da interrupção
-volatile uint last_time = 0; // Armazena o tempo do último evento (em microssegundos)   
+volatile uint last_time = 0; // Armazena o tempo do último evento (em microssegundos)
+
+// Função que será disparada quando a interrupção for atendida
+void buttons_irq_handler(uint gpio, uint32_t events){
+    // Obtém o tempo atual em microssegundos
+    uint64_t current_time = to_us_since_boot(get_absolute_time());
+
+    // Verifica se já se passaram 100 ms desde o último evento de acionamento do botão
+    if (current_time - last_time > interval){
+        last_time = current_time;
+
+        int new_counter;
+
+        // Verifica qual botão foi pressionado para incrementar ou decrementar o contador
+        switch (gpio){
+            case 5:
+                printf("Botão A foi pressionado\n");
+
+                if(counter + 1 <= 9){
+                    draw_on_matrix(*(get_number_layout(++counter)),pio,sm);
+                }
+            break;
+
+            case 6:
+                printf("Botão B foi pressionado\n");
+
+                if(counter - 1 >= 0){
+                    draw_on_matrix(*(get_number_layout(--counter)),pio,sm);
+                }
+            break;
+
+            default:
+            break;
+        }
+    }
+}
 
 int main()
 {
@@ -34,6 +69,9 @@ int main()
 
     // Inicializa a matriz de LED's com o número zero
     draw_on_matrix(*(get_number_layout(counter)), pio, sm);
+
+    // Configurando os botões
+    initialize_buttons(BUTTON_A_PIN, BUTTON_B_PIN, buttons_irq_handler);
 
     while (true) {
         // Piscando o led
