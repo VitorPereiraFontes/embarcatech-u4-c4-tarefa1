@@ -15,11 +15,9 @@ O presente projeto deverá atender aos seguintes requerimentos:
 
 ## Demonstração
 
-Seguem o vídeo de demonstração do projeto na placa BitDogLab.
+Segue o link do vídeo de demonstração do projeto na placa BitDogLab.
 
-<video controls>
-  <source src="https://www.youtube.com/watch?v=QCehlGIUWpQ" type="video/mp4">
-</video>
+[Vídeo](https://youtu.be/QCehlGIUWpQ)
 
 ## Instruções
 
