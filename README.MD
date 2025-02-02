@@ -18,7 +18,7 @@ O presente projeto deverá atender aos seguintes requerimentos:
 Seguem o vídeo de demonstração do projeto na placa BitDogLab.
 
 <video controls>
-  <source src="https://drive.google.com/file/d/1kBdVLsuFR7tlS2QCflAxjezycThB3m7r/view?usp=drive_link" type="video/mp4">
+  <source src="https://www.youtube.com/watch?v=QCehlGIUWpQ" type="video/mp4">
 </video>
 
 ## Instruções
