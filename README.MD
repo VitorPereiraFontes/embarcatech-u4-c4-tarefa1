@@ -18,7 +18,7 @@ O presente projeto deverá atender aos seguintes requerimentos:
 Seguem o vídeo de demonstração do projeto na placa BitDogLab.
 
 <video controls>
-  <source src="./video/embarcatech-u4-c4-t1.mp4" type="video/mp4">
+  <source src="https://drive.google.com/file/d/1kBdVLsuFR7tlS2QCflAxjezycThB3m7r/view?usp=drive_link" type="video/mp4">
 </video>
 
 ## Instruções
