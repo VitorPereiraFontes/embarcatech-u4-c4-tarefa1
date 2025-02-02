@@ -15,7 +15,11 @@ O presente projeto deverá atender aos seguintes requerimentos:
 
 ## Demonstração
 
-Seguem os vídeos de demonstração do projeto, tanto no simulador Wokwi quanto na placa BitDogLab.
+Seguem o vídeo de demonstração do projeto na placa BitDogLab.
+
+<video controls>
+  <source src="./video/embarcatech-u4-c4-t1.mp4" type="video/mp4">
+</video>
 
 ## Instruções
 
